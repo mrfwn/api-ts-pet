@@ -26,6 +26,12 @@ class ImagesRepository implements IImagesRepository {
     return this.ormRepository.save(files);
   }
 
+  public async insertPet(pet: ICreateImageDTO): Promise<Image> {
+    const file = this.ormRepository.create(pet);
+
+    return this.ormRepository.save(file);
+  }
+
   public async deleteImages(filesName: string[]): Promise<void> {
     await Promise.all(
       filesName.map(async name => {

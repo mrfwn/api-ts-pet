@@ -7,21 +7,17 @@ import ensureAutheticated from '../middlewares/ensureAuthenticated';
 
 const imagesRouter = Router();
 const upload = multer(uploadConfig.multer);
-const casesStudentController = new ImagesController();
+const imagesController = new ImagesController();
 
-imagesRouter.get('/', ensureAutheticated, casesStudentController.index);
+imagesRouter.get('/', ensureAutheticated, imagesController.index);
 
 imagesRouter.post(
   '/',
   ensureAutheticated,
   upload.array('file'),
-  casesStudentController.create,
+  imagesController.create,
 );
 
-imagesRouter.delete(
-  '/:case_id',
-  ensureAutheticated,
-  casesStudentController.delete,
-);
+imagesRouter.delete('/:case_id', ensureAutheticated, imagesController.delete);
 
 export default imagesRouter;

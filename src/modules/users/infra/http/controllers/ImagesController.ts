@@ -13,9 +13,9 @@ export default class CasesUserController {
     const listAllImages = container.resolve(ListImagesService);
     const user_id = request.user.id;
 
-    const casesStudent = await listAllImages.execute(user_id);
+    const listImages = await listAllImages.execute(user_id);
 
-    return response.json(classToClass(casesStudent));
+    return response.json(classToClass(listImages));
   }
 
   public async create(request: Request, response: Response): Promise<Response> {
@@ -24,7 +24,6 @@ export default class CasesUserController {
     const { files } = request;
 
     const filesName = files.map(file => file.filename);
-
     const images = await insertImages.execute({
       user_id,
       filesName,

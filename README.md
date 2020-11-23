@@ -13,7 +13,7 @@
   ##  Running:
    - Clone code - "git clone url_repository" .
    - Running "yarn" in path .
-   - For better structuring of the code used, Eslint, Editor config and Prittier, installation of plugins in Vscode.
+   - For better structuring of the code used, Eslint, Editor config and Prettier installation of plugins in Vscode.
 
    - run "yarn dev:server" in terminal.
 

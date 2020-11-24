@@ -12,22 +12,7 @@
 
 > **Abstract:** *A good image-to-image translation model should learn a mapping between different visual domains while satisfying the following properties: 1) diversity of generated images and 2) scalability over multiple domains. Existing methods address either of the issues, having limited diversity or multiple models for all domains. We propose StarGAN v2, a single framework that tackles both and shows significantly improved results over the baselines. Experiments on CelebA-HQ and a new animal faces dataset (AFHQ) validate our superiority in terms of visual quality, diversity, and scalability. To better assess image-to-image translation models, we release AFHQ, high-quality animal faces with large inter- and intra-domain variations. The code, pre-trained models, and dataset are available at clovaai/stargan-v2.*
 
-## Teaser video
-Click the figure to watch the teaser video. <br/>
-
-[![IMAGE ALT TEXT HERE](assets/youtube_video.jpg)](https://youtu.be/0EVh5Ki4dIY)
-
-## TensorFlow implementation
-The TensorFlow implementation of StarGAN v2 by our team member junho can be found at [clovaai/stargan-v2-tensorflow](https://github.com/clovaai/stargan-v2-tensorflow).
-
 ## Software installation
-Clone this repository:
-
-```bash
-git clone https://github.com/clovaai/stargan-v2.git
-cd stargan-v2/
-```
-
 Install the dependencies:
 ```bash
 conda create -n stargan-v2 python=3.6.7
@@ -37,28 +22,19 @@ conda install x264=='1!152.20180717' ffmpeg=4.0.2 -c conda-forge
 pip install opencv-python==4.1.2.30 ffmpeg-python==0.2.0 scikit-image==0.16.2
 pip install pillow==7.0.0 scipy==1.2.1 tqdm==4.43.0 munch==2.5.0
 ```
+Download the pretrained repository for AFHQ
 
+```bash
+bash download.sh pretrained-network-afhq
+```
 
 ## Running the code
 To evaluate StarGAN v2 using [Fr&eacute;chet Inception Distance (FID)](https://arxiv.org/abs/1706.08500) and [Learned Perceptual Image Patch Similarity (LPIPS)](https://arxiv.org/abs/1801.03924), run the following commands:
-
 
 ```bash
 
 # afhq
 python main.py 
-```
-
-
-## Animal Faces-HQ dataset (AFHQ)
-
-<p align="left"><img width="99%" src="assets/afhq_dataset.jpg" /></p>
-
-We release a new dataset of animal faces, Animal Faces-HQ (AFHQ), consisting of 15,000 high-quality images at 512×512 resolution. The figure above shows example images of the AFHQ dataset. The dataset includes three domains of cat, dog, and wildlife, each providing about 5000 images. By having multiple (three) domains and diverse images of various breeds per each domain, AFHQ sets a challenging image-to-image translation problem. For each domain, we select 500 images as a test set and provide all remaining images as a training set. To download the dataset, run the following command:
-
-
-```bash
-bash download.sh afhq-dataset
 ```
 
 ## License

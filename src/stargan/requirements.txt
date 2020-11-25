@@ -1,0 +1,9 @@
+torch
+torchvision
+opencv-python
+ffmpeg-python
+scikit-image
+pillow
+scipy
+tqdm
+munch

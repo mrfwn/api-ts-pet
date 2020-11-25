@@ -2,6 +2,7 @@ import { injectable, inject } from 'tsyringe';
 import path from 'path';
 import { spawn } from 'promisify-child-process';
 import AppError from '@shared/errors/AppError';
+import fs from 'fs';
 
 import IUsersRepositoy from '@modules/users/repositories/IUsersRepository';
 import IImagesRepository from '@modules/users/repositories/IImagesRepository';
@@ -39,22 +40,25 @@ class InsertImageService {
       '..',
       '..',
       '..',
-      'script',
-      'script.py',
+      'stargan',
+      'main.py',
     );
-    const { stdout } = await spawn('python', [script, ...imagesIds], {
+
+    fs.writeFile('imgNames.txt', imagesIds[0], 'utf-8', () => {});
+
+    await spawn('python', [script], {
       encoding: 'utf8',
     });
-    if (stdout) {
-      const name = stdout.toString();
-      await this.storageProvider.saveFile(name);
 
-      return this.imagesRepository.insertPet({
-        user_id,
-        name,
-        type: true,
-      });
-    }
+    const name = fs.readFileSync('output.txt', 'utf8');
+
+    await this.storageProvider.saveFile(name);
+
+    return this.imagesRepository.insertPet({
+      user_id,
+      name,
+      type: true,
+    });
 
     return new Image();
   }

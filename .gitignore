@@ -4,6 +4,7 @@ temp/
 .idea/
 .vscode/
 .env
+expr/
 
 dist
 tmp/*

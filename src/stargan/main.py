@@ -19,16 +19,20 @@ def main():
 
     solver = Solver()
 
-    src = cv2.imread("assets/src.jpeg")
-    ref = cv2.imread("assets/ref.jpg")
+    with open('imgNames.txt') as f:
+        imgName = f.read()
+
+    src = cv2.imread("tmp/uploads/" + imgName)
+    ref = cv2.imread("src/stargan/assets/ref.jpg")
 
     t0 = time.time()
     res_img = solver.sample(src,ref)
     t1 = time.time()
     
-    cv2.imwrite("teste.jpg",res_img)
-    print("Time:")
-    print(t1-t0)
+    cv2.imwrite("tmp/teste.jpg",res_img)
+
+    with open('output.txt', 'w+') as f:
+        f.write('teste.jpg')
 
 if __name__ == '__main__':
     main()

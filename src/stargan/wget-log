@@ -1,0 +1,24 @@
+WARNING: timestamping does nothing in combination with -O. See the manual
+for details.
+
+--2020-11-24 23:15:29--  https://www.dropbox.com/s/etwm810v25h42sn/100000_nets_ema.ckpt?dl=0
+Resolving www.dropbox.com (www.dropbox.com)... 2620:100:601f:1::a27d:901, 162.125.9.1
+Connecting to www.dropbox.com (www.dropbox.com)|2620:100:601f:1::a27d:901|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: /s/raw/etwm810v25h42sn/100000_nets_ema.ckpt [following]
+--2020-11-24 23:15:30--  https://www.dropbox.com/s/raw/etwm810v25h42sn/100000_nets_ema.ckpt
+Reusing existing connection to [www.dropbox.com]:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://uce592b7f278f1cd6528b2aca697.dl.dropboxusercontent.com/cd/0/inline/BD37X5x-HRFu8OZUB8SRRJKVmuoAgAAIUI0M3UoEE1jY_YBRcUKjriLYBD5ED5WJwVNMcDClb9HpTkr1fqhz4Kb9AmPjgYapq6eMoevFanzraP42_NJLd9Pq9nj0vkxyKiY/file# [following]
+--2020-11-24 23:15:31--  https://uce592b7f278f1cd6528b2aca697.dl.dropboxusercontent.com/cd/0/inline/BD37X5x-HRFu8OZUB8SRRJKVmuoAgAAIUI0M3UoEE1jY_YBRcUKjriLYBD5ED5WJwVNMcDClb9HpTkr1fqhz4Kb9AmPjgYapq6eMoevFanzraP42_NJLd9Pq9nj0vkxyKiY/file
+Resolving uce592b7f278f1cd6528b2aca697.dl.dropboxusercontent.com (uce592b7f278f1cd6528b2aca697.dl.dropboxusercontent.com)... 2620:100:601f:15::a27d:90f, 162.125.9.15
+Connecting to uce592b7f278f1cd6528b2aca697.dl.dropboxusercontent.com (uce592b7f278f1cd6528b2aca697.dl.dropboxusercontent.com)|2620:100:601f:15::a27d:90f|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: /cd/0/inline2/BD3qTMIRJG_NBKY_MYtQZEp2GhZwiG6ya86Mb7QXGEaeVNsGBKsAEzs8u1_ifgh8udP7UnSfWoG-OXjZRJ49WkHbLONlwJMRbZ_fLnQQKgKe-ZlUnX4Ukkk596FnydgYL1lXakYb-Rbkm7lVz21gNbExq4zZdyZlQYGpELnSgL1yYK8nSOs73qdErP2XoHEQd2t8tERtrKRzyOSMRA7eNhUTpNoXfbmix6Ss8FPXk5xeNYUOv2UC2v9UMR4h1yCam8DlHnD9PT6mPPCxt6bKymAR-cOIovoA6y-JxL2z6G4mbG70vapOmMMPT19yz4sLL7E25rVT-zKevskHSY2ymz20ZXq-lFQVupfozjLXybBRJg/file [following]
+--2020-11-24 23:15:33--  https://uce592b7f278f1cd6528b2aca697.dl.dropboxusercontent.com/cd/0/inline2/BD3qTMIRJG_NBKY_MYtQZEp2GhZwiG6ya86Mb7QXGEaeVNsGBKsAEzs8u1_ifgh8udP7UnSfWoG-OXjZRJ49WkHbLONlwJMRbZ_fLnQQKgKe-ZlUnX4Ukkk596FnydgYL1lXakYb-Rbkm7lVz21gNbExq4zZdyZlQYGpELnSgL1yYK8nSOs73qdErP2XoHEQd2t8tERtrKRzyOSMRA7eNhUTpNoXfbmix6Ss8FPXk5xeNYUOv2UC2v9UMR4h1yCam8DlHnD9PT6mPPCxt6bKymAR-cOIovoA6y-JxL2z6G4mbG70vapOmMMPT19yz4sLL7E25rVT-zKevskHSY2ymz20ZXq-lFQVupfozjLXybBRJg/file
+Reusing existing connection to [uce592b7f278f1cd6528b2aca697.dl.dropboxusercontent.com]:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 257897044 (246M) [application/octet-stream]
+Saving to: ‘./expr/checkpoints/afhq/100000_nets_ema.ckpt’
+
+           ./expr/c  67%[============>       ] 167,03M  85,9KB/s    eta 16m 17s          ./expr/ch  67%[============>       ] 167,06M  85,9KB/s    eta 16m 17s         ./expr/che  67%[============>       ] 167,08M  84,5KB/s    eta 16m 16s

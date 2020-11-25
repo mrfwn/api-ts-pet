@@ -13,7 +13,9 @@ import torch
 from core.solver import Solver
 import cv2
 import time
-
+import random
+import string
+from random import randrange
 
 def main():
 
@@ -23,16 +25,15 @@ def main():
         imgName = f.read()
 
     src = cv2.imread("tmp/uploads/" + imgName)
-    ref = cv2.imread("src/stargan/assets/ref.jpg")
+    ref = cv2.imread("src/stargan/assets/ref_"+str(randrange(7))+".jpg")
 
-    t0 = time.time()
     res_img = solver.sample(src,ref)
-    t1 = time.time()
+    name_f = ''.join(random.choices(string.ascii_uppercase + string.digits, k=15))+'.jpg'
     
-    cv2.imwrite("tmp/teste.jpg",res_img)
+    cv2.imwrite("tmp/"+name_f,res_img)
 
     with open('output.txt', 'w+') as f:
-        f.write('teste.jpg')
+        f.write(name_f)
 
 if __name__ == '__main__':
     main()

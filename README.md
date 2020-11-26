@@ -1,14 +1,14 @@
 <head>
-	<h1> Web Pet</h1>
+	<h1>Dogmon</h1>
 </head>
 <body>
 	<p align="center">
-  <img src="logopet.jpg" width="150" title="Web Pet">
+  <img src="logo.png" width="150" title="Dogmon">
 </p>
 <div>
 
   ##  Description:
-   - Web pet is an pet friendly project, where will you create your pet identity.
+   - The Dogmon is a fun way to turn your photos into "dogmonster" versions of yourself. Using starGAN, we built a "DogMonstrifier", combining your photo with images of dogs and generating completely absurd and surprising results. Try it now and see what kind of monster you can become.
 
   ##  Running:
    - Clone code - "git clone url_repository" .
